@@ -1,0 +1,8 @@
+.title {
+  width: 100vw;
+  height: 10vw;
+  background: yellowgreen;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
