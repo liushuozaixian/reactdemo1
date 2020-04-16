@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Page1.css';
 class Page1 extends React.Component {
   // constructor(props) {
@@ -20,13 +20,21 @@ class Page1 extends React.Component {
   render() {
     return (
       <div>
-       我是page1页面
+        我是page1页面
        <div>
-         <Link to="/page2">去往page2页面</Link>
-       </div>
-       <div>
-         <Link to="/page3">去往page3页面</Link>
-       </div>
+          <Link to="/page2">去往page2页面</Link>
+        </div>
+        <div>
+          <Link to="/page3">去往page3页面</Link>
+        </div>
+        <div className="line"></div>
+        <div>
+          <Link to="/page1/child1">展示此页面的child1</Link>
+        </div>
+        <div>
+          <Link to="/page1/child2">展示此页面的child2</Link>
+        </div>
+        <div className="line"></div>
       </div>
     )
   }
