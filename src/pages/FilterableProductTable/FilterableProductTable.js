@@ -21,7 +21,7 @@ class FilterableProductTable extends React.Component {
         { category: "Electronics", price: "$399.99", stocked: false, name: "iPhone 5" },
         { category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7" }
       ],
-      filterText: 'oo',
+      filterText: '',
       inStockOnly: false
     }
   }
@@ -40,9 +40,13 @@ class FilterableProductTable extends React.Component {
       inStockOnly: value
     })
   }
+  componentDidMount() {
+    // document.title = '我是商品清单'
+  }
   render() {
     return (
       <div>
+        <div className="title2">商品展示查询清单</div>
         <SearchBar onFilterTextChange={this.onFilterTextChange} onInStockOnlyChange={this.onInStockOnlyChange} filterText={this.state.filterText} inStockOnly={this.state.inStockOnly}></SearchBar>
         <ProductTable data={this.state.date} filterText={this.state.filterText} inStockOnly={this.state.inStockOnly}></ProductTable>
       </div>
