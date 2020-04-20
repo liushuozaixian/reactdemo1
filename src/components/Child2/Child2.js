@@ -8,6 +8,8 @@ class Child2 extends React.Component {
   //   }
   // }
   render() {
+    console.log('我是Child2.js')
+    console.log(this.props)
     return (
       <div className='title'>
         我是page1的child2

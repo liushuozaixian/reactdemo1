@@ -1,7 +1,8 @@
 import React from 'react';
 import './Page2.css';
+import Page2RouterCom from '../../components/Page2RouterCom/Page2RouterCom'
 class Page2 extends React.Component {
-  
+
   // constructor(props) {
   //   super(props);
   //   this.state = {
@@ -18,10 +19,17 @@ class Page2 extends React.Component {
   //   }
   // }
   render() {
+    console.log('我是页面2的测试参数')
+    console.log(this.props)
     return (
       <div>
-       我是page2页面
+        <div>
+          我是page2页面
+        </div>
+        <div className="line"></div>
+        <Page2RouterCom parentPath={this.props.match.url}></Page2RouterCom>
       </div>
+
     )
   }
 
